@@ -7,10 +7,12 @@
 module.exports.environments = {
   codeceptjs: {
     globals: {
-      Scenario: false,
-      Feature: false,
       actor: false,
-      Before: false
+      Feature: false,
+      Scenario: false,
+      Before: false,
+      After: false,
+      within: false
     }
   }
 }
