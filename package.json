@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-codeceptjs",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Eslint rules for CodeceptJS",
   "keywords": [
     "eslint",
@@ -8,6 +8,10 @@
     "eslint-plugin"
   ],
   "author": "@poenneby",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/poenneby/eslint-plugin-codeceptjs.git"
+  },
   "main": "./index.js",
   "scripts": {
     "test": "echo 'Not yet!'"
@@ -24,3 +28,4 @@
   },
   "license": "ISC"
 }
+
