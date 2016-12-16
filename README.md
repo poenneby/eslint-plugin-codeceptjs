@@ -28,7 +28,7 @@ Add `codeceptjs` to the plugins section of your `.eslintrc` configuration file. 
         "codeceptjs"
     ],
     "env": {
-      "codeceptjs/codeceptjs": true
+        "codeceptjs/codeceptjs": true
     }
 }
 ```
