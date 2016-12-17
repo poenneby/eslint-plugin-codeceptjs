@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-codeceptjs",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Eslint rules for CodeceptJS",
   "keywords": [
     "eslint",
@@ -28,4 +28,3 @@
   },
   "license": "ISC"
 }
-
