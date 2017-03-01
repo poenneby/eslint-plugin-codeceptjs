@@ -14,14 +14,14 @@
   },
   "main": "./index.js",
   "scripts": {
-    "test": "echo 'Not yet!'"
+    "test": "mocha ./tests/lib/rules/*.js"
   },
   "dependencies": {
     "requireindex": "~1.1.0"
   },
   "devDependencies": {
     "eslint": "~2.6.0",
-    "mocha": "^2.4.5"
+    "mocha": "^2.5.3"
   },
   "engines": {
     "node": ">=0.10.0"

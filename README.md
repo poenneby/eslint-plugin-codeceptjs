@@ -36,12 +36,14 @@ Add `codeceptjs` to the plugins section of your `.eslintrc` configuration file. 
 
 Then configure the rules you want to use under the rules section.
 
-Coming soon...
-
+```
+{
+  "rules": {
+    "no-actor-in-scenario": 2
+  }
+}
+```
 ## Supported Rules
 
-
-
-
-
+- `no-actor-in-scenario`: Prevents the use of the `actor` in a `Scenario` and delegate to page objects
 

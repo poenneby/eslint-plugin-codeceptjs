@@ -4,16 +4,21 @@
  */
 "use strict";
 
-module.exports.environments = {
-  codeceptjs: {
-    globals: {
-      actor: false,
-      Feature: false,
-      Scenario: false,
-      Before: false,
-      After: false,
-      within: false
+module.exports = {
+  environments: {
+    codeceptjs: {
+      globals: {
+        actor: false,
+        Feature: false,
+        Scenario: false,
+        Before: false,
+        After: false,
+        within: false
+      },
     }
+  },
+  rules: {
+    "no-actor-in-scenario": require("./lib/rules/no-actor-in-scenario")
   }
 }
 
