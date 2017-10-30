@@ -13,6 +13,8 @@ module.exports = {
         Scenario: false,
         Before: false,
         After: false,
+        BeforeSuite: false,
+        AfterSuite: false,
         within: false
       },
     }
