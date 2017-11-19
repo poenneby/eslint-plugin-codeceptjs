@@ -1,3 +1,5 @@
+![build status](https://travis-ci.org/poenneby/eslint-plugin-codeceptjs.svg?branch=master)
+
 # eslint-plugin-codeceptjs
 
 Eslint rules for CodeceptJS
