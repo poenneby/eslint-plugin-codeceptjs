@@ -19,10 +19,19 @@ function invalidScenarios(functionStyle, hasAwait) {
   return invalidScenarios;
 }
 
+const outsideVarTest = `
+let x;
+
+Scenario('My scenario', async (Page) => {
+  x = await Page.submit();
+});
+`;
+
 ruleTester.run("no-actor-in-scenario", rule, {
   valid: [
     "Before(function(I) { I.amOnPage() }); Scenario('My scenario', function(Page) { Page.submit() });",
-    "Before(function(I) { I.amOnPage() }); Scenario('My scenario', async function(Page) { await Page.submit() });"
+    "Before(function(I) { I.amOnPage() }); Scenario('My scenario', async function(Page) { await Page.submit() });",
+    outsideVarTest
   ],
   invalid: invalidScenarios("function(I)").concat(invalidScenarios("async function(I)", true))
     .concat(invalidScenarios("(I) =>")).concat(invalidScenarios("async (I) =>", true))
