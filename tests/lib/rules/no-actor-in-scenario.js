@@ -19,11 +19,17 @@ function invalidScenarios(functionStyle, hasAwait) {
   return invalidScenarios;
 }
 
-const outsideVarTest = `
-let x;
+const outerScopeVarSync = `
+let api_key;
+Scenario('test create APIKey success', async (fence, commons) => {
+  api_key = await Page.submit();
+});
+`;
 
-Scenario('My scenario', async (Page) => {
-  x = await Page.submit();
+const outerScopeVarAsync = `
+let api_key;
+Scenario('test create APIKey success', (fence, commons) => {
+  api_key = Page.submit();
 });
 `;
 
@@ -31,7 +37,7 @@ ruleTester.run("no-actor-in-scenario", rule, {
   valid: [
     "Before(function(I) { I.amOnPage() }); Scenario('My scenario', function(Page) { Page.submit() });",
     "Before(function(I) { I.amOnPage() }); Scenario('My scenario', async function(Page) { await Page.submit() });",
-    outsideVarTest
+    outerScopeVarAsync, outerScopeVarSync
   ],
   invalid: invalidScenarios("function(I)").concat(invalidScenarios("async function(I)", true))
     .concat(invalidScenarios("(I) =>")).concat(invalidScenarios("async (I) =>", true))
