@@ -17,7 +17,8 @@ module.exports = {
         AfterSuite: false,
         within: false,
         Data: false,
-        DataTable: false
+        DataTable: false,
+        Helper: false
       },
     }
   },
