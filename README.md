@@ -41,7 +41,7 @@ Then configure the rules you want to use under the rules section.
 ```
 {
   "rules": {
-    "coedeceptjs/no-actor-in-scenario": 2
+    "codeceptjs/no-actor-in-scenario": 2
   }
 }
 ```
