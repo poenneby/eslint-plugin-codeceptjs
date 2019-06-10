@@ -14,7 +14,7 @@
   },
   "main": "./index.js",
   "scripts": {
-    "test": "mocha ./tests/lib/rules/*.js"
+    "test": "mocha --formatter dot ./tests/lib/rules/*.js"
   },
   "dependencies": {
     "requireindex": "~1.1.0"
