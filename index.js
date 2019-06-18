@@ -25,6 +25,6 @@ module.exports = {
   },
   rules: {
     "no-actor-in-scenario": require("./lib/rules/no-actor-in-scenario"),
-    "no-disabled-tests": require("./lib/rules/no-disabled-tests")
+    "no-skipped-tests": require("./lib/rules/no-skipped-tests")
   }
 };

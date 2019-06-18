@@ -2,7 +2,7 @@
 
 var RuleTester = require('eslint').RuleTester;
 
-var rule = require('../../../lib/rules/no-disabled-tests');
+var rule = require('../../../lib/rules/no-skipped-tests');
 
 var ruleTester = new RuleTester();
 
@@ -11,12 +11,12 @@ function invalidScenario (code) {
     code: code,
     parserOptions: { ecmaVersion: 6 },
     errors: [
-      { message: 'Disabled test' }
+      { message: 'Unexpected skipped test' }
     ]
   };
 }
 
-ruleTester.run('no-disabled-tests', rule, {
+ruleTester.run('no-skipped-tests', rule, {
   valid: [
     'Scenario("this is cool", function () {});'
   ],
