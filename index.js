@@ -11,6 +11,7 @@ module.exports = {
         actor: false,
         Feature: false,
         Scenario: false,
+        xScenario: false,
         Before: false,
         After: false,
         BeforeSuite: false,
@@ -23,7 +24,7 @@ module.exports = {
     }
   },
   rules: {
-    "no-actor-in-scenario": require("./lib/rules/no-actor-in-scenario")
+    "no-actor-in-scenario": require("./lib/rules/no-actor-in-scenario"),
+    "no-disabled-tests": require("./lib/rules/no-disabled-tests")
   }
-}
-
+};
