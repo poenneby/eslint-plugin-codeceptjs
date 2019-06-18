@@ -12,7 +12,8 @@ function invalidScenario (code) {
     parserOptions: { ecmaVersion: 6 },
     errors: [
       { message: 'Unexpected exclusive test' }
-    ]
+    ],
+    output: 'Scenario("this is not", function () {});'
   };
 }
 
