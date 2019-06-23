@@ -5,6 +5,19 @@
 "use strict";
 
 module.exports = {
+  configs: {
+    recommended: {
+      env: {
+        "codeceptjs/codeceptjs": true
+      },
+      plugins: ["codeceptjs"],
+      rules: {
+        "codeceptjs/no-actor-in-scenario": "off",
+        "codeceptjs/no-exclusive-tests": "error",
+        "codeceptjs/no-skipped-tests": "error"
+      }
+    }
+  },
   environments: {
     codeceptjs: {
       globals: {

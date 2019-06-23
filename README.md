@@ -22,7 +22,15 @@ $ npm install eslint-plugin-codeceptjs --save-dev
 
 ## Usage
 
-Add `codeceptjs` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+The simplest way to use this plugin is to add the `/recommended` config to the extends section of your `.eslintrc` configuration file:
+
+```json
+{
+  "extends": ["plugin:codeceptjs/recommended"]
+}
+```
+
+Alternatively, add `codeceptjs` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
 
 ```json
 {
@@ -35,7 +43,6 @@ Add `codeceptjs` to the plugins section of your `.eslintrc` configuration file. 
 }
 ```
 
-
 Then configure the rules you want to use under the rules section.
 
 ```
@@ -47,8 +54,14 @@ Then configure the rules you want to use under the rules section.
 ```
 ## Supported Rules
 
-- `no-actor-in-scenario`: Prevents the use of the `actor` in a `Scenario` and delegate to page objects
-- `no-exclusive-tests`: Prevents the use of `Scenario.only` to focus tests
-- `no-skipped-tests`: Prevents the use of `xScenario` or `Scenario.skip` to [skip tests][1]
+| Name | Description | Recommended | Fixable |
+|------|-------------|-------------|---------|
+| `no-actor-in-scenario` | Prevents the use of the `actor` in a `Scenario` and delegate to page objects | | |
+| `no-exclusive-tests` | Prevents the use of `Scenario.only` to focus tests | ![error] | ![fixable] |
+| `no-skipped-tests` | Prevents the use of `xScenario` or `Scenario.skip` to [skip tests][1] | ![error] | ![fixable] |
 
   [1]: https://codecept.io/basics/#skipping
+
+  [fixable]: https://img.shields.io/badge/-fixable-green.svg
+  [warn]: https://img.shields.io/badge/-warn-yellow.svg
+  [error]: https://img.shields.io/badge/-error-red.svg
