@@ -9,6 +9,12 @@ module.exports = {
     codeceptjs: {
       globals: {
         actor: false,
+        by: false,
+        inject: false,
+        locate: false,
+        pause: false,
+        secret: false,
+        session: false,
         Feature: false,
         Scenario: false,
         xScenario: false,
