@@ -60,6 +60,7 @@ Then configure the rules you want to use under the rules section.
 | `no-exclusive-tests` | Prevents the use of `Scenario.only` to focus tests | ![error] | ![fixable] |
 | `no-skipped-tests` | Prevents the use of `xScenario` or `Scenario.skip` to [skip tests][1] | ![error] | ![fixable] |
 | `no-pause-in-scenario` | Prevents the use of `pause()` in a test | | ![fixable] |
+
   [1]: https://codecept.io/basics/#skipping
 
   [fixable]: https://img.shields.io/badge/-fixable-green.svg
