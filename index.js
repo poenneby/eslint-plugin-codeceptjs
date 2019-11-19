@@ -14,7 +14,8 @@ module.exports = {
       rules: {
         "codeceptjs/no-actor-in-scenario": "off",
         "codeceptjs/no-exclusive-tests": "error",
-        "codeceptjs/no-skipped-tests": "error"
+        "codeceptjs/no-skipped-tests": "error",
+        "codeceptjs/no-pause-in-scenario": "error"
       }
     }
   },
@@ -45,6 +46,7 @@ module.exports = {
   rules: {
     "no-actor-in-scenario": require("./lib/rules/no-actor-in-scenario"),
     "no-exclusive-tests": require("./lib/rules/no-exclusive-tests"),
-    "no-skipped-tests": require("./lib/rules/no-skipped-tests")
+    "no-skipped-tests": require("./lib/rules/no-skipped-tests"),
+    "no-pause-in-scenario": require("./lib/rules/no-pause-in-scenario")
   }
 };
