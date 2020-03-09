@@ -17,11 +17,25 @@ function invalidScenario (code) {
   };
 }
 
+function invalidDataScenario (code) {
+  return {
+    code: code,
+    parserOptions: { ecmaVersion: 6 },
+    errors: [
+      { message: 'Unexpected exclusive test' }
+    ],
+    output: 'Data("data").Scenario("this is not", function () {});'
+  };
+}
+
 ruleTester.run('no-exclusive-tests', rule, {
   valid: [
-    'Scenario("this is cool", function () {});'
+    'Scenario("this is cool", function () {});',
+    'Data("data").Scenario("this is cool", function () {});'
   ],
   invalid: [
-    invalidScenario('Scenario.only("this is not", function () {});')
+    
+    invalidScenario('Scenario.only("this is not", function () {});'),
+    invalidDataScenario('Data("data").only.Scenario("this is not", function () {});')
   ],
 });

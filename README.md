@@ -57,7 +57,7 @@ Then configure the rules you want to use under the rules section.
 | Name | Description | Recommended | Fixable |
 |------|-------------|-------------|---------|
 | `no-actor-in-scenario` | Prevents the use of the `actor` in a `Scenario` and delegate to page objects | | |
-| `no-exclusive-tests` | Prevents the use of `Scenario.only` to focus tests | ![error] | ![fixable] |
+| `no-exclusive-tests` | Prevents the use of `Scenario.only` or `Data.only` to focus tests | ![error] | ![fixable] |
 | `no-skipped-tests` | Prevents the use of `xScenario` or `Scenario.skip` to [skip tests][1] | ![error] | ![fixable] |
 | `no-pause-in-scenario` | Prevents the use of `pause()` in a test | ![error] | ![fixable] |
 
