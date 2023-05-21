@@ -39,7 +39,8 @@ module.exports = {
         within: false,
         Data: false,
         DataTable: false,
-        Helper: false
+        Helper: false,
+        tryTo: false
       },
     }
   },
